@@ -57,6 +57,24 @@ const followersArray = [];
 
 */
 
+const cardCreator = (cardObj) => {
+  // created elements
+  const card = document.createElement('div');
+  const cardImg = document.createElement('img');
+  const cardInfo = document.createElement('div');
+  const name = document.createElement('h3');
+  const username = document.createElement('p');
+  const location = document.createElement('p');
+  const profilePage = document.createElement('p');
+  const url = document.createElement('a');
+  const followers = document.createElement('p');
+  const following = document.createElement('p');
+  const bio = document.createElement('p');
+  
+  // returned card
+  return card;
+}
+
 /* List of LS Instructors Github username's: 
   tetondan
   dustinmyers
@@ -64,3 +82,5 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+
