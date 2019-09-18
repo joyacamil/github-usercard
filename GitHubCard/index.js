@@ -56,15 +56,6 @@ const followersArray = [];
 </div>
 
 */
-// avatar_url: "https://avatars2.githubusercontent.com/u/29736597?v=4"
-// bio: null
-// followers: 2
-// following: 2
-// html_url: "https://github.com/joyacamil"
-// location: null
-// login: "joyacamil"
-// name: null
-
 
 const cardCreator = (cardObj) => {
   // created elements
@@ -96,6 +87,18 @@ const cardCreator = (cardObj) => {
   followers.textContent = '${data.followers}';
   following.textContent = '${data.following}';
   bio.textContent = '${data.bio}';
+
+  // structure
+  card.appendChild(cardImg);
+  card.appendChild(cardInfo);
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(username);
+  cardInfo.appendChild(location);
+  cardInfo.appendChild(profilePage);
+  profilePage.appendChild(url);
+  card.appendChild(followers);
+  card.appendChild(following);
+  card.appendChild(bio);
 
   // returned card
   return card;
