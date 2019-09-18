@@ -71,6 +71,13 @@ const cardCreator = (cardObj) => {
   const following = document.createElement('p');
   const bio = document.createElement('p');
   
+  // added to classes
+  card.classList.add('card');
+  cardInfo.classList.add('card-info');
+  name.classList.add('name');
+  username.classList.add('username');
+
+  
   // returned card
   return card;
 }
