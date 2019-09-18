@@ -3,16 +3,14 @@
            https://api.github.com/users/<your name>
 */
 // Make a request for a user with a given ID
-axios.get('https://api.github.com/users/joyacamil')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  });
+const cardHolder= document.querySelector('.cards');
 
+axios.get('https://api.github.com/users/joyacamil')
+.then(response => {
+  console.log(response.data);
+
+  cardHolder.appendChild(cardCreator(response.data));
+});
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -56,8 +54,7 @@ const followersArray = [];
 </div>
 
 */
-
-const cardCreator = (cardObj) => {
+const cardCreator = (data) => {
   // created elements
   const card = document.createElement('div');
   const cardImg = document.createElement('img');
@@ -111,5 +108,3 @@ const cardCreator = (cardObj) => {
   luishrd
   bigknell
 */
-
-
